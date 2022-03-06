@@ -1,8 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
 :root {
-	margin: 0px; 
-	padding: 0px;
-	/* box-sizing: border-box; */
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  --bg-color: black;
+  --label-color: #9f9f9f;
+  --color: #d5d5d5;
+  /* --button-color: #f149ff; */
+  --button-color: #02e4f4;
+
+  --label-size: 0.8rem;
+  --normal-size: 1.2rem;
+  --one-rem: 1rem;
 }
+
+/* ************** body ****************** */
 body {
-	/* background-color: red; */
+
+/* ############## man ############ */
+  background-image: url("images/man.jpg");
+  background-position: -75px 22%;
+background-size: 90vh 85vw;
+
+
+/* ########### Leaf ################## */
+  /* background-image: url("images/art.jpg");
+  background-size: 100vh 100vw;
+  background-position: 0% 10%; */
+
+  color: var(--color);
+  font-family: "Poppins", sans-serif;
 }
+/* ************** body ****************** */
+
+/* ************** container ****************** */
+.container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  
+  width: 75vw;
+  height: 100vh;
+}
+/* ************** container ****************** */
+
+/* ************** main-image ****************** */
+.section-window {
+	width: 20vw;
+	height: 100vh;
+}
+
+/* ************** main-image ****************** */
+
+/* ************** text-section ****************** */
+.do-this {
+	font-size: var(--normal-size);
+
+}
+.sign-up-now {
+  font-size: var(--normal-size);
+  font-weight: bold;
+  color: var(--button-color);
+  font-size: 1.5rem;
+}
+.section-form {
+	padding: 0.8rem 2rem;
+	font-size: var(--normal-size);
+	background-color: var(--bg-color);
+	flex-direction: column;
+	display: flex;
+	justify-content: space-between;
+}
+/* ************** text-section  ****************** */
+
+
+/* ************** table start ****************** */
+
+input {
+  background-color: var(--bg-color);
+  width: 25vw;
+  height: 1.5rem;
+  color: var(--color);
+  border: 0.2px solid var(--color);
+  margin: 0;
+  border-radius: 0.3rem;
+  display: block;
+  margin-right: 1.6rem;
+  margin-bottom: 0.8rem;
+  padding-left: 0.5rem;
+}
+input[type="password"]
+{
+	background-color: var(--bg-color);
+}
+input:focus {
+  border: 0.2px solid var(--button-color);
+  outline: none;
+}
+label {
+  font-size: var(--label-size);
+  color: var(--label-color);
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  position: relative;
+  top: 0.2rem;
+}
+
+/* ************** table end ****************** */
+
+/* ************** line beginning ****************** */
+.line {
+  height: 0.1rem;
+  width: 100%;
+  box-shadow: 0px 2px 12px white;
+  margin: 2rem 0;
+  background-color: var(--color);
+}
+/* ************** line end ****************** */
+
+/* ************** button start ****************** */
+.create-account {
+  padding: 0.7rem 2rem;
+  background-color: var(--bg-color);
+  color: var(--button-color);
+  border: 0.1rem solid var(--button-color);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+
+}
+.create-account:hover {
+	background-color: var(--button-color);
+	color: var(--bg-color);
+}
+/* ************** button end ****************** */
+
+/* ************** login section start ****************** */
+.login {
+  margin: 1.5rem 0;
+  font-size: var(--one-rem);
+}
+a {
+  color: var(--button-color);
+  text-decoration: none;
+  font-weight: bold;
+
+}
+a:hover {
+	color: white;
+}
+/* ************** login section end ****************** */
+
+@media screen and (max-width: 720px) {
+	body {
+		color: greenyellow;
+	}
+	.container {
+		flex-direction: column;
+		width: 100vw;
+	}
+	.section-window {
+		height: 40vh;
+		width: 100vw;
+	}
+	td {
+		display: block;	
+	}
+} 
+	
