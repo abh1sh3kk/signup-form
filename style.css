@@ -14,6 +14,9 @@
   --label-size: 0.8rem;
   --normal-size: 1.2rem;
   --one-rem: 1rem;
+
+  --form-width: 60vw;
+  --glass-width: 40vw;
 }
 
 /* ************** body ****************** */
@@ -23,34 +26,43 @@ body {
   background-image: url("images/man.jpg");
   background-position: -75px 22%;
 background-size: 90vh 85vw;
-
-
-/* ########### Leaf ################## */
-  /* background-image: url("images/art.jpg");
-  background-size: 100vh 100vw;
-  background-position: 0% 10%; */
+background-attachment: fixed;
 
   color: var(--color);
   font-family: "Poppins", sans-serif;
+  word-wrap: break-word;
 }
 /* ************** body ****************** */
 
 /* ************** container ****************** */
 .container {
   display: flex;
+
   position: fixed;
   top: 0;
   right: 0;
   
-  width: 75vw;
+  width: 100vw;
   height: 100vh;
 }
 /* ************** container ****************** */
 
 /* ************** main-image ****************** */
 .section-window {
-	width: 20vw;
-	height: 100vh;
+  width: var(--glass-width);
+  background-color: aqua;
+  opacity: 0;
+}
+/* .logo-bar {
+	top: 20px;
+	left: 0;
+	background-color: red;
+	width: 100%;
+	height: 2rem;
+} */
+img[alt="logo"] {
+	height: 2rem;
+	width: 2rem;
 }
 
 /* ************** main-image ****************** */
@@ -61,6 +73,7 @@ background-size: 90vh 85vw;
 
 }
 .sign-up-now {
+  margin: 1rem 0;
   font-size: var(--normal-size);
   font-weight: bold;
   color: var(--button-color);
@@ -73,6 +86,7 @@ background-size: 90vh 85vw;
 	flex-direction: column;
 	display: flex;
 	justify-content: space-between;
+  width: var(--form-width);
 }
 /* ************** text-section  ****************** */
 
@@ -80,7 +94,7 @@ background-size: 90vh 85vw;
 /* ************** table start ****************** */
 
 input {
-  background-color: var(--bg-color);
+  background: none;
   width: 25vw;
   height: 1.5rem;
   color: var(--color);
@@ -92,10 +106,7 @@ input {
   margin-bottom: 0.8rem;
   padding-left: 0.5rem;
 }
-input[type="password"]
-{
-	background-color: var(--bg-color);
-}
+
 input:focus {
   border: 0.2px solid var(--button-color);
   outline: none;
@@ -114,7 +125,7 @@ label {
 /* ************** line beginning ****************** */
 .line {
   height: 0.1rem;
-  width: 100%;
+  width: 50%;
   box-shadow: 0px 2px 12px white;
   margin: 2rem 0;
   background-color: var(--color);
@@ -133,6 +144,7 @@ label {
 
 }
 .create-account:hover {
+  cursor: pointer;
 	background-color: var(--button-color);
 	color: var(--bg-color);
 }
@@ -154,18 +166,57 @@ a:hover {
 }
 /* ************** login section end ****************** */
 
+
+
+
+/* ***********  Media Query ******************** */
+
+
 @media screen and (max-width: 720px) {
 	body {
-		color: greenyellow;
+    height: auto;
+    width: 100vw;
 	}
+  .section-form{
+  padding: 0.8rem 1rem;
+	font-size: var(--normal-size);
+	background-color: var(--bg-color);
+	flex-direction: column;
+	display: flex;
+	justify-content: space-between;
+  width: 100%
+  }
+  .headline {
+    word-wrap: break-word;
+    width: 90%;
+  }
+  .login {
+    width: 90%;
+  }
 	.container {
-		flex-direction: column;
-		width: 100vw;
+    
+    width: 100vw;
+    height: auto;
+    top: 0;
+    left: 0;
+    position: absolute;
+    flex-direction: column;
 	}
+  .headline {
+    font-size: 1rem;
+  }
+  input {
+    width: 75%;
+  }
 	.section-window {
-		height: 40vh;
-		width: 100vw;
+		background-color: aqua;
+    height: 20vh;
+    width: 100vw;
+    opacity: 100;
 	}
+  table {
+    width: 100%;
+  }
 	td {
 		display: block;	
 	}
