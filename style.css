@@ -105,7 +105,9 @@ input {
   margin-bottom: 0.8rem;
   padding-left: 0.5rem;
 }
-
+input:invalid {
+  /* border: 1px solid red; */
+}
 input:focus {
   border: 0.2px solid var(--button-color);
   outline: none;
@@ -132,6 +134,18 @@ label {
 /* ************** line end ****************** */
 
 /* ************** button start ****************** */
+.buttons {
+  display: flex;
+  width: 96%;
+  justify-content: space-between;
+  align-items: center;
+}
+img[alt="reset button"] {
+  height: 1.5rem;
+  position: relative;
+  filter: hue-rotate(90deg) saturate(100);
+}
+
 .create-account {
   padding: 0.7rem 2rem;
   background-color: var(--bg-color);
@@ -147,6 +161,7 @@ label {
 	background-color: var(--button-color);
 	color: var(--bg-color);
 }
+
 /* ************** button end ****************** */
 
 /* ************** login section start ****************** */
@@ -219,5 +234,5 @@ a:hover {
 	td {
 		display: block;	
 	}
-} 
+}
 	
