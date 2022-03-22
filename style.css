@@ -15,22 +15,15 @@
   --normal-size: 1.2rem;
   --responsive-normal: clamp(0.2rem,20vw ,1.3rem);
   --one-rem: 1rem;
-
-  --form-width: 60vw;
-  --glass-width: 40vw;
 }
 
 /* ************** body ****************** */
 body {
-
-/* ############## man ############ */
-  background-image: url("images/man.jpg");
-  background-position: -75px 22%;
-background-size: 90vh 85vw;
-background-attachment: fixed;
-
   color: var(--color);
+  height: 100vh;
+  width: 100vw;
   font-family: "Poppins", sans-serif;
+  /* overflow: hidden; */
 }
 /* ************** body ****************** */
 
@@ -48,22 +41,14 @@ background-attachment: fixed;
 /* ************** container ****************** */
 
 /* ************** main-image ****************** */
-.section-window {
-  width: var(--glass-width);
-  background-color: aqua;
-  opacity: 0;
+img {
+  width: 100%;
+  height: 100%;
 }
-/* .logo-bar {
-	top: 20px;
-	left: 0;
-	background-color: red;
-	width: 100%;
-	height: 2rem;
-} */
-img[alt="logo"] {
-	height: 2rem;
-	width: 2rem;
+.image {
+  object-fit: cover;
 }
+
 
 /* ************** main-image ****************** */
 
@@ -81,19 +66,18 @@ img[alt="logo"] {
 }
 .section-form {
 	padding: 0.8rem 2rem;
-  font-size: var(--responsive-normal);
-	/* font-size: var(--normal-size); */
+	font-size: var(--normal-size);
 	background-color: var(--bg-color);
 	flex-direction: column;
 	display: flex;
 	justify-content: center;
-  width: var(--form-width);
+  width: 60%;
+  /* width: var(--form-width); */
 }
 /* ************** text-section  ****************** */
 
 
 /* ************** table start ****************** */
-
 input {
   background: none;
   width: 25vw;
@@ -106,9 +90,6 @@ input {
   margin-right: 1.6rem;
   margin-bottom: 0.8rem;
   padding-left: 0.5rem;
-}
-input:invalid {
-  /* border: 1px solid red; */
 }
 input:focus {
   border: 0.2px solid var(--button-color);
@@ -144,6 +125,7 @@ label {
 }
 img[alt="reset button"] {
   height: 1.5rem;
+  width: auto;
   position: relative;
   filter: hue-rotate(90deg) saturate(100);
 }
@@ -183,8 +165,6 @@ a:hover {
 /* ************** login section end ****************** */
 
 
-
-
 /* ***********  Media Query ******************** */
 
 
@@ -192,16 +172,20 @@ a:hover {
 	body {
     height: auto;
     width: 100vw;
+    background-image: url(images/man.jpg);
+    background-size: cover;
+    overflow: auto;
 	}
   .section-form{
-  padding: 0.8rem 1rem;
-	font-size: var(--normal-size);
-	background-color: var(--bg-color);
-	flex-direction: column;
-	display: flex;
-	justify-content: space-between;
-  width: 100%
-  }
+    padding: 0.8rem 1rem;
+    font-size: var(--normal-size);
+    background-color: var(--bg-color);
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.82);
+  } 
   .headline {
     word-wrap: break-word;
     width: 90%;
@@ -209,8 +193,13 @@ a:hover {
   .login {
     width: 90%;
   }
+  .buttons {
+    width: 75.69%;
+  }
+  .section-image {
+    display: none;
+  }
 	.container {
-    
     min-width: 380px;
     height: auto;
     top: 0;
@@ -224,12 +213,6 @@ a:hover {
   input {
     width: 75%;
   }
-	.section-window {
-		background-color: aqua;
-    height: 20vh;
-    width: 100vw;
-    opacity: 0;
-	}
   table {
     width: 100%;
   }

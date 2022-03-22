@@ -14,7 +14,9 @@
   </head>
   <body>
     <div class="container">
-      <div class="section-window"></div>
+      <div class="section-image">
+        <img src="images/man.jpg" alt="The main image" class="image" />
+      </div>
       <div class="section-form">
         <p class="headline">
           This is not the real online service! Lorem ipsum dolor sit amet
@@ -85,8 +87,12 @@
           <div class="line"></div>
           <div class="buttons">
             <button type="submit" class="create-account">Create Account</button>
-	    <input class="reset" type="reset" style="display: none">
-	    <img src="images/svg-reset.svg" alt="reset button" onClick="document.querySelector('form').reset();">
+            <input class="reset" type="reset" style="display: none" />
+            <img
+              src="images/svg-reset.svg"
+              alt="reset button"
+              onClick="document.querySelector('form').reset();"
+            />
           </div>
           <div class="login">
             Already have an account? <a href="#">Login</a>
