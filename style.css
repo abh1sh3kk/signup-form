@@ -13,6 +13,7 @@
 
   --label-size: 0.8rem;
   --normal-size: 1.2rem;
+  --responsive-normal: clamp(0.2rem,20vw ,1.3rem);
   --one-rem: 1rem;
 
   --form-width: 60vw;
@@ -80,7 +81,8 @@ img[alt="logo"] {
 }
 .section-form {
 	padding: 0.8rem 2rem;
-	font-size: var(--normal-size);
+  font-size: var(--responsive-normal);
+	/* font-size: var(--normal-size); */
 	background-color: var(--bg-color);
 	flex-direction: column;
 	display: flex;
@@ -209,7 +211,7 @@ a:hover {
   }
 	.container {
     
-    width: 100vw;
+    min-width: 380px;
     height: auto;
     top: 0;
     left: 0;
