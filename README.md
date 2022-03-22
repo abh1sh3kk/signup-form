@@ -10,4 +10,4 @@ This repository contains a basic yet responsive form made by using HTML5 and CSS
 
 ## Check it out
 
-➡️ https://keep-calm-and-fill-the-form.netlify.app/ ⬅️
+➡️ https://hello-frands-form-varlo.netlify.app/ ⬅️
