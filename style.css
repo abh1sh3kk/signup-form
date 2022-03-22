@@ -64,6 +64,7 @@ img {
   color: var(--button-color);
   font-size: 1.5rem;
 }
+
 .section-form {
 	padding: 0.8rem 2rem;
 	font-size: var(--normal-size);
@@ -73,6 +74,9 @@ img {
 	justify-content: center;
   width: 60%;
   /* width: var(--form-width); */
+}
+.section-image {
+  width: 40%;
 }
 /* ************** text-section  ****************** */
 
